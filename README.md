@@ -50,6 +50,7 @@ role (admin "0", client "1")
 
 
 ***Products Table
+
 id (int, AI, PK)
 
 name (varchar, unique)
