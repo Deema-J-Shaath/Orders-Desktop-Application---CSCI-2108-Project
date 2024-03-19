@@ -33,6 +33,7 @@ Logout
 --------------------------
 
 Database Schema
+
 ***Users Table
 
 id (int, AI, PK)
