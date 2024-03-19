@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FinalProject.ClientEditOrderController">
+<children>
+        <VBox fx:id="logoBar" alignment="CENTER" prefHeight="100.0" prefWidth="590.0">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            <children>
+                <BorderPane VBox.vgrow="ALWAYS">
+                    <left>
+                        <Label fx:id="logo" prefHeight="28.0" prefWidth="136.0" text="TechZone" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                    </left>
+                    <right>
+                        <Button fx:id="dashboardButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#dashboardHandle" prefHeight="45.0" prefWidth="127.0" text="Dashboard" BorderPane.alignment="CENTER" />
+                    </right>
+                </BorderPane>
+            </children>
+        </VBox>
+        <MenuBar fx:id="menuBar" maxHeight="-Infinity" prefHeight="35.0" prefWidth="590.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#exitMenuItemHandle" text="Exit">
+                            <graphic>
+                                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@exit.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
+                    <items>
+                  <Menu mnemonicParsing="false" text="Font Family">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#sansSeridFontFamily" text="Sans-serif" />
+                        <MenuItem mnemonicParsing="false" onAction="#arialFontFamily" text="Arial" />
+                        <MenuItem mnemonicParsing="false" onAction="#monospaceFontFamilyHandle" text="monospace" />
+                    </items>
+                  </Menu>
+                  <Menu fx:id="submenu" mnemonicParsing="false" onAction="#fontSizeHandle" text="Font size">
+                     <items>
+                        <MenuItem fx:id="size22" mnemonicParsing="false" text="30" />
+                        <MenuItem fx:id="size14" mnemonicParsing="false" text="20" />
+                        <MenuItem fx:id="size20" mnemonicParsing="false" text="18" />
+                        <MenuItem fx:id="size18" mnemonicParsing="false" text="15" />
+                     </items></Menu>
+                        <MenuItem fx:id="backgroundColorMenuItem" mnemonicParsing="false" onAction="#backgroundColorHandle" text="Background color">
+                     <graphic>
+                        <ColorPicker fx:id="colorPicker" />
+                     </graphic></MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#helpmenuItem" text="About app">
+                            <graphic>
+                                <ImageView fitHeight="150.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@info.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <VBox prefHeight="399.0" prefWidth="643.0" spacing="20.0">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            <children>
+            <Label text="Edit Orders">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <VBox spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane prefHeight="258.0" prefWidth="613.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="115.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="526.0" minWidth="10.0" prefWidth="498.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Product" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Order date" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Quantity" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="quantityTextField" maxWidth="-Infinity" prefHeight="45.0" prefWidth="477.0" promptText="enter quantity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="datePicker" prefHeight="45.0" prefWidth="289.0" promptText="DD/MM/YY" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="productComboBox" prefHeight="45.0" prefWidth="477.0" promptText="Show Products in Cart" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                                      <Button fx:id="applyEdits" mnemonicParsing="false" onAction="#applyEditsButton" prefHeight="45.0" prefWidth="127.0" text="Appy Edits" />
+                              <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetButtonHandle" prefHeight="45.0" prefWidth="127.0" text="Reset" />
+                           </children>
+                        </HBox>
+                        <Label text="Order Number">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="orderIDtextField" maxWidth="-Infinity" prefHeight="45.0" prefWidth="477.0" promptText="enter order number" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            </children>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@ClientDashboardStyle.css" />
+    </stylesheets>
+</VBox>

@@ -1,0 +1,44 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 18 May 2023, 0:09:49
+    Author     : deemashaath
+*/
+
+.root{
+    -fx-background-color: #6379AB;
+}
+#card{
+    -fx-background-color: white;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+   -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 90, 0.4, 0, 0);
+}
+
+#registrationErrLabel{
+    -fx-text-fill: red;
+}
+
+#loginBtn{
+    -fx-background-color: #568BFB;
+    -fx-text-fill: white;
+}
+
+#registerBtn{
+    -fx-background-color: #CBD2FC;
+    -fx-text-fill: #6379AB;
+    -fx-font-weight: bold;
+}
+
+#submitBtn{
+    -fx-background-color: #568BFB;
+    -fx-text-fill: white;
+}
+
+#uploadImageChooser{
+    -fx-background-color: darkgrey;
+    -fx-text-fill: white;
+}

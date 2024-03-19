@@ -1,0 +1,84 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 19 May 2023, 20:50:47
+    Author     : deemashaath
+*/
+
+.root{
+    -fx-background-color: #E6EBF1;
+}
+#logoBar{
+    -fx-background-color: #6379AB;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.7, 0, 0);
+}
+#menuBar{
+    -fx-background-color: #CBD2FC;
+    -fx-text-fill: #6379AB;
+}
+#logo{
+    -fx-text-fill: white;
+    -fx-font-family:sans-serif;
+}
+.menu{
+    -fx-font-size: 18px;
+}
+.border-pane{
+    -fx-padding: 10px;
+}
+#logoutButton{
+    -fx-background-color: #CBD2FC;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+#editButton{
+    -fx-background-color: #568BFB;
+    -fx-text-fill: white;
+}
+
+#dashboardButton{
+    -fx-background-color: #CBD2FC;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+#chooseImageButton{
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+}
+
+#categoryCombobox{
+    -fx-background-color: darkgray;
+    -fx-text-fill: white;
+}
+
+
+
+#applyEdits{
+    -fx-background-color: #568BFB;
+    -fx-text-fill: white;
+}
+
+#resetButton{
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+}
+
+#mainBtnStyle{
+    -fx-background-color: #568BFB;
+    -fx-text-fill: white;
+}
+#datePickerErrorLabel{
+    -fx-text-fill: red;
+}
+editButtons{
+    -fx-background-color: darkgray;
+    -fx-text-fill: white;
+}
+#mobileLabel, #emailLabel, #nameLabel{
+    -fx-text-fill: darkcyan;
+    
+}
